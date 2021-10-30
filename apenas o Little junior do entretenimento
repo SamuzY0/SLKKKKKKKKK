@@ -1,0 +1,40 @@
+final = 'Sim' 
+while final == 'Sim' : 
+
+    print("Olá Bem vindo (a) ao Mybank")
+    print("Simulador de Investimento")
+    print("Titulos disponiveis :")
+    print("1-Mybank2024")
+    print("2-Mybank2026")
+    cliente = int(input("Qual desses voce gostaria de simular ?"))
+    valor1 = int(input("Quanto voce quer investir inicialmente?"))
+    mensa = int(input("Quanto voce quer investir mensalmente?"))
+    if  cliente == 1 :
+        valor2=(mensa*32)+valor1
+        valor3=valor2/100
+        vlbruto=(valor3*26.66) + valor2
+        ImpRen=(vlbruto/100)*15
+        b3=(vlbruto/100)/2
+        liquido =vlbruto-b3-ImpRen
+    else:
+        valor2=(mensa*50)+valor1
+        valor3=valor2/100
+        vlbruto=(valor3*48.84) + valor2
+        ImpRen=(vlbruto/100)*15
+        b3=(vlbruto/100)
+        liquido =vlbruto-b3-ImpRen
+
+    print("-------------------------------")
+    print("   RESULTADO DA SIMULAÇÃO      ")
+    print("-------------------------------")
+    print("Investimento Inicial: ", valor1)
+    print("Valor investido por 32 meses: ", mensa)
+    print("Valor total investido: ",valor2)
+    print("-------------------------------")
+    print("valor bruto",vlbruto)
+    print("imposto de renda",ImpRen)
+    print("Taxa de B3",b3)
+    print("Valor liquido",liquido)
+    final = input("Voce quer iniciar outra simulaçao Sim ou Nao")
+    if  final == 'Nao' :
+        break
